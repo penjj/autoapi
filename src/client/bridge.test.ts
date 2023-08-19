@@ -1,11 +1,11 @@
 import { expect, it, describe, vi } from 'vitest'
 
-import { createBridge, BridgeImpl, buildUrl, api } from './bridge'
+import { useBridge, BridgeImpl, buildUrl, api } from './bridge'
 import { DevNetError } from './errors'
 
 describe('Bridge tests', () => {
   it('Should create singleton client', () => {
-    expect(createBridge()).toEqual(createBridge())
+    expect(useBridge()).toEqual(useBridge())
   })
 
   it('Should throw error when requestHandler unset', () => {
@@ -39,7 +39,7 @@ describe('buildUrl tests', () => {
 
 describe('api tests', () => {
   const fn = vi.fn()
-  createBridge().setRequestHandler(fn)
+  useBridge().setRequestHandler(fn)
 
   it('Should conversion parameters', () => {
     const getUser = api`GET /user/{id}`

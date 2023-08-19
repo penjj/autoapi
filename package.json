@@ -1,6 +1,6 @@
 {
   "name": "autoapi",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "A lightweight tool to generate OpenAPI (2.0|3.0) specification from TypeScript code.",
   "type": "module",
   "packageManager": "pnpm@8.6.0",
@@ -53,8 +53,8 @@
     "cac": "^6.7.14",
     "tsup": "^6.6.0",
     "typescript": "^5.1.6",
-    "vitest": "^0.28.4",
-    "bumpp": "^9.0.0"
+    "vitest": "^0.34.2",
+    "bumpp": "^9.1.1"
   },
   "eslintConfig": {
     "extends": [
