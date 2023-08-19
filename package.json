@@ -1,0 +1,73 @@
+{
+  "name": "autoapi",
+  "version": "0.0.2",
+  "description": "A lightweight tool to generate OpenAPI (2.0|3.0) specification from TypeScript code.",
+  "type": "module",
+  "packageManager": "pnpm@8.6.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/penjj/autoapi",
+  "author": "peng.j.1995@gmail.com",
+  "license": "MIT",
+  "keywords": [
+    "swagger",
+    "openapi",
+    "codegen",
+    "generate api"
+  ],
+  "scripts": {
+    "test": "vitest --watch",
+    "dev": "tsup --watch src",
+    "build": "tsup",
+    "lint": "eslint src --ext=ts --fix",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "preversion": "pnpm build",
+    "version": "pnpm changelog && git add .",
+    "release": "bumpp --all && pnpm publish"
+  },
+  "main": "src/index.ts",
+  "bin": {
+    "autoapi": "dist/program.cjs"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./codegen": {
+      "import": "./dist/codegen.js",
+      "require": "./dist/codegen.cjs",
+      "types": "./dist/codegen.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "cac": "^6.7.14"
+  },
+  "devDependencies": {
+    "eslint-plugin-all-in-one": "^0.1.1",
+    "@types/node": "^18.14.1",
+    "openapi-types": "^12.1.0",
+    "cac": "^6.7.14",
+    "tsup": "^6.6.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.28.4",
+    "bumpp": "^9.0.0",
+    "conventional-changelog-cli": "^2.2.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:all-in-one/import",
+      "plugin:all-in-one/typescript",
+      "plugin:all-in-one/prettier"
+    ],
+    "rules": {
+      "@typescript-eslint/no-shadow": "off"
+    },
+    "ignorePatterns": ["dist", "node_modules", "example"]
+  }
+}

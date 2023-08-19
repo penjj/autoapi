@@ -1,0 +1,12 @@
+{
+  "name": "github-openapi",
+  "scripts": {
+    "gen": "autoapi gen --doc https://raw.githubusercontent.com/github/rest-api-description/main/descriptions-next/ghes-3.0/ghes-3.0.json --output apis --model apis/models"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "devDependencies": {
+    "autoapi": "workspace:*"
+  }
+}
