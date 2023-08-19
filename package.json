@@ -1,5 +1,5 @@
 {
-  "name": "autoapi",
+  "name": "ts-autoapi",
   "version": "0.0.1",
   "description": "A lightweight tool to generate OpenAPI (2.0|3.0) specification from TypeScript code.",
   "type": "module",
@@ -7,7 +7,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/penjj/autoapi",
+  "homepage": "https://github.com/penjj/ts-autoapi",
   "author": "peng.j.1995@gmail.com",
   "license": "MIT",
   "keywords": [
@@ -18,7 +18,7 @@
   ],
   "main": "src/index.ts",
   "bin": {
-    "autoapi": "dist/program.cjs"
+    "ts-autoapi": "dist/program.cjs"
   },
   "exports": {
     ".": {

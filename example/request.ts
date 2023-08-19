@@ -1,4 +1,4 @@
-import { useBridge } from 'autoapi'
+import { useBridge } from 'ts-autoapi'
 import axios, { type Method } from 'axios'
 
 const ins = axios.create({})

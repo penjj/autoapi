@@ -39,7 +39,7 @@ importers:
         specifier: ^0.19.2
         version: registry.npmmirror.com/axios@0.19.2
     devDependencies:
-      autoapi:
+      ts-autoapi:
         specifier: workspace:*
         version: link:..
 

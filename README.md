@@ -1,4 +1,4 @@
-# autoapi
+# ts-autoapi
 
 
 使用 openapi 或者 swagger 自动生成请求方法，和ts类型，并且不预设任何请求库，可连接到任意请求工具。
@@ -7,12 +7,12 @@
 
 ## Installation
 ```bash
-npm install autoapi -D
+npm install ts-autoapi -D
 ```
 
 ## Usage
 ```bash
-npx autoapi gen --doc https://raw.githubusercontent.com/github/rest-api-description/main/descriptions-next/ghes-3.0/ghes-3.0.json --output test-apis --model test-apis/models
+npx ts-autoapi gen --doc https://raw.githubusercontent.com/github/rest-api-description/main/descriptions-next/ghes-3.0/ghes-3.0.json --output test-apis --model test-apis/models
 
 # your file structure will be like this
 .
@@ -29,7 +29,7 @@ npx autoapi gen --doc https://raw.githubusercontent.com/github/rest-api-descript
 // you should setRequestHandler before use apis
 
 // index.ts
-import { useBridge } from 'autoapi'
+import { useBridge } from 'ts-autoapi'
 import { axios } from "<your request utils>" // or any request utils
 
 /**
@@ -64,7 +64,7 @@ postLogin({
 ## Write your customize apis
 ```ts
 // test-apis/my-api.ts
-import { api } from 'autoapi'
+import { api } from 'ts-autoapi'
 
 export const getMyApi = api`GET /my-api`
 
