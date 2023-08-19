@@ -16,16 +16,6 @@
     "codegen",
     "generate api"
   ],
-  "scripts": {
-    "test": "vitest --watch",
-    "dev": "tsup --watch src",
-    "build": "tsup",
-    "lint": "eslint src --ext=ts --fix",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "preversion": "pnpm build",
-    "version": "pnpm changelog && git add .",
-    "release": "bumpp --all && pnpm publish"
-  },
   "main": "src/index.ts",
   "bin": {
     "autoapi": "dist/program.cjs"
@@ -45,6 +35,14 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "test": "vitest",
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "lint": "eslint src --ext=ts --fix",
+    "release": "bumpp -r",
+    "typecheck": "tsc --noEmit"
+  },
   "peerDependencies": {
     "cac": "^6.7.14"
   },
@@ -56,8 +54,7 @@
     "tsup": "^6.6.0",
     "typescript": "^5.1.6",
     "vitest": "^0.28.4",
-    "bumpp": "^9.0.0",
-    "conventional-changelog-cli": "^2.2.2"
+    "bumpp": "^9.0.0"
   },
   "eslintConfig": {
     "extends": [

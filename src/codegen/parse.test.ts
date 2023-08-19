@@ -26,7 +26,7 @@ test('normalizeUrl test', () => {
 test('resolveModelName test', () => {
   const createName = uniqueNameFactory()
   expect(resolveModelName('#/merchant/banner/delete', createName)).toEqual(
-    'delete'
+    'Delete'
   )
   expect(resolveModelName('#/merchant/banner/测试', createName)).toEqual(
     'UnnamedModel'
