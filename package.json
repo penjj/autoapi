@@ -7,7 +7,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/penjj/ts-autoapi",
+  "homepage": "https://github.com/penjj/autoapi",
   "author": "peng.j.1995@gmail.com",
   "license": "MIT",
   "keywords": [
