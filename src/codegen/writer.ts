@@ -86,7 +86,7 @@ export function createApi(apis: Apis) {
 
   if (deps.length) {
     ret.unshift(
-      `import {\n  ${deps.join(',\n  ')}\n} from '${apis.modelPath}'\n`
+      `import type {\n  ${deps.join(',\n  ')}\n} from '${apis.modelPath}'\n`
     )
   }
   ret.unshift(`import { api, type Config, type Api } from 'ts-autoapi'\n`)
