@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "eslint-plugin-all-in-one": "^0.1.1",
-    "@types/node": "^18.14.1",
+    "@types/node": "^20.5.9",
     "openapi-types": "^12.1.0",
     "cac": "^6.7.14",
     "tsup": "^6.6.0",
