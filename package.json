@@ -51,7 +51,7 @@
     "@types/node": "^20.5.9",
     "openapi-types": "^12.1.0",
     "cac": "^6.7.14",
-    "tsup": "^6.6.0",
+    "tsup": "^7.2.0",
     "typescript": "^5.1.6",
     "vitest": "^0.34.2",
     "bumpp": "^9.1.1"
