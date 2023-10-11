@@ -1,6 +1,6 @@
 {
   "name": "ts-autoapi",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "A lightweight tool to generate TypeScript code from OpenAPI (2.0|3.0) specification.",
   "type": "module",
   "packageManager": "pnpm@8.6.0",
