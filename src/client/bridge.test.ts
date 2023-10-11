@@ -90,4 +90,58 @@ describe('api tests', () => {
       },
     })
   })
+
+  it('Should has top level in config', () => {
+    const getUser = api`POST /user`
+    getUser({ a: 20 })
+
+    expect(fn).toHaveBeenLastCalledWith({
+      url: '/user',
+      method: 'POST',
+      body: {
+        a: 20,
+      },
+    })
+  })
+
+  it('Should has top level in config', () => {
+    const getUser = api`GET /user`
+    getUser({ a: 20 })
+
+    expect(fn).toHaveBeenLastCalledWith({
+      url: '/user',
+      method: 'GET',
+      query: {
+        a: 20,
+      },
+    })
+  })
+
+  it('Should has top level in config', () => {
+    const getUser = api`POST /user/{id}`
+    getUser(
+      10,
+      { a: 20 },
+      {
+        url: '/user/30',
+        query: {
+          a: 10,
+        },
+        body: {
+          b: 20,
+        },
+      }
+    )
+
+    expect(fn).toHaveBeenLastCalledWith({
+      url: '/user/30',
+      method: 'POST',
+      query: {
+        a: 10,
+      },
+      body: {
+        b: 20,
+      },
+    })
+  })
 })

@@ -1,5 +1,5 @@
+import type { Apis } from './parse'
 import { upperFirst } from './name'
-import { Apis } from './parse'
 
 export const fixedHeader = `/* eslint-disable */
 // @ts-nocheck

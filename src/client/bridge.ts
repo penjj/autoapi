@@ -102,6 +102,11 @@ export function api<T extends (...args: any[]) => any>(
   const [method, originalUrl] = apiConfig[0].split(' ')
 
   const request = (paths?: any, payload?: any, config?: any) => {
+    // 如果没有插槽，paths 即 payload
+    if (!/{\w+}/.test(originalUrl)) {
+      payload = paths
+      paths = undefined
+    }
     useBridge().request<any>({
       method,
       url: buildUrl(originalUrl, paths),
