@@ -54,7 +54,7 @@
     "tsup": "^7.2.0",
     "typescript": "^5.1.6",
     "vitest": "^1.1.1",
-    "bumpp": "^9.1.1"
+    "bumpp": "^10.2.3"
   },
   "eslintConfig": {
     "extends": [
