@@ -47,14 +47,14 @@
     "cac": "^6.7.14"
   },
   "devDependencies": {
-    "eslint-plugin-all-in-one": "^0.3.2",
-    "@types/node": "^20.5.9",
-    "openapi-types": "^12.1.0",
+    "@types/node": "^20.19.39",
+    "bumpp": "^9.11.1",
     "cac": "^6.7.14",
+    "eslint-plugin-all-in-one": "^0.3.7",
+    "openapi-types": "^12.1.3",
     "tsup": "^7.2.0",
-    "typescript": "^5.1.6",
-    "vitest": "^1.1.1",
-    "bumpp": "^9.1.1"
+    "typescript": "^5.9.3",
+    "vitest": "^1.6.1"
   },
   "eslintConfig": {
     "extends": [
